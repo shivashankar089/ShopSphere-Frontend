@@ -94,7 +94,7 @@ export default function Auth({ mode }) {
       }
     } catch (err) {
       if (!err.response) {
-        setError('Cannot connect to backend server at http://localhost:8080. Please ensure the backend is running.')
+        setError('Cannot connect to the server. It may be waking up, so please try again in a minute.')
       } else if (err.response.data?.message) {
         setError(err.response.data.message)
       } else if (err.response.status === 401) {
